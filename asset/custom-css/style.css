@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --p-color : #FF731D;
+    --s-color : #FFF7E9;
+    --t-color : #1746A2;
+}
+
+.login {
+    height: 100vh;
+    background-color: var(--p-color);
+}
+.login .left img {
+    margin-top: 0.57rem;
+    height: 31rem;
+}
+.login .left h1 {
+    font-weight: 600;
+    color: var(--s-color);
+}
+.login .right {
+    background-color: var(--s-color);
+    border-radius: 2rem;
+}
+.login .right .btn-login {
+    color: var(--s-color);
+    background-color: var(--t-color);
+    border: none;
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.login .right .btn-login:hover {
+    background-color: var(--p-color);
+}
+
+
+.profile {
+  color: #18d26e;
+  font-size: 2rem;
+}
