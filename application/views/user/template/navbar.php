@@ -3,16 +3,16 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <!-- <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1> -->
+      <h1 class="logo me-auto"><a href="index.html">ruangbelajar.</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="<?= base_url('asset/user-template')?>/assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <a href="index.html" class="logo me-auto"><img src="asset/img/logo-horizontal-b-g-k.png" alt="" class="img-fluid"></a>
+      <!-- <a href="index.html" class="logo me-auto"><img src="asset/img/logo-horizontal-b-g-k.png" alt="" class="img-fluid"></a> -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="active" href="index.html">Beranda</a></li>
-          <li><a href="#">Materi</a></li>
-          <li><a href="#">Kategori</a></li>
+          <li><a href="<?= base_url() ?>home/materi">Materi</a></li>
+          <li><a href="<?= base_url() ?>home/kategori">Kategori</a></li>
           <li class="dropdown"><a href="#"><span><i class="bi bi-person-circle ps-5" style="font-size : 2rem"></i></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Profile</a></li>

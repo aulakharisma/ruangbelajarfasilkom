@@ -91,7 +91,9 @@
             </div>
           </div> <!-- End Course Item-->
 
+          <a href="http://localhost/ruangbelajarfasilkom/home/materi" style="margin-top:2rem; font-weight:600 ;"><p>Lihat Semua Materi >></p></a>
         </div>
+
 
       </div>
     </section><!-- End Popular Courses Section -->
@@ -101,7 +103,7 @@
     <section id="features" class="features mt-5">
       <div class="container" data-aos="fade-up">
 
-      <div class="section-title mt-5">
+      <div class="section-title">
           <h2>Kategori Mata Kuliah</h2>
           <p>Mata Kuliah</p>
         </div>
@@ -110,51 +112,53 @@
           <div class="col-lg-3 col-md-4">
             <div class="icon-box">
               <i class="ri-store-line" style="color: #ffbb2c;"></i>
-              <h3><a href="">UI UX</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">UI UX</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box">
               <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a href="">Data Analis</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">Data Analis</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div class="icon-box">
               <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a href="">Data Scientist</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">Data Scientist</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div class="icon-box">
               <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-              <h3><a href="">Metode Penelitian</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">Metode Penelitian</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="">Basis Data</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">Basis Data</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a href="">Etika dan Kompetensi Informatika</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">Etika dan Kompetensi Informatika</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-              <h3><a href="">Kalkulus</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">Kalkulus</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box">
               <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="">Metode Numerik</a></h3>
+              <h3><a href="<?= base_url() ?>home/detailkategori">Metode Numerik</a></h3>
             </div>
           </div>
+          <a href="#" style="margin-top:2rem; font-weight:600 ;"><p>Lihat Semua Kategori >></p></a>
+
         </div>
 
       </div>
@@ -162,7 +166,7 @@
 
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
+    <section id="counts" class="counts section-bg mt-5 pt-5">
       <div class="container">
 
         <div class="row counters">
