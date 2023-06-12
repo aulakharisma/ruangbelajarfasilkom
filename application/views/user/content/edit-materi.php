@@ -42,6 +42,7 @@
                         <label for="formFile" class="form-label">Pilih Sampull</label>
                         <input class="form-control" type="file" id="formFile">
                     </div>
+                    <a href="#" class="btn btn-success">Submit</a>
                 </form>
                 </div>
             </div>
