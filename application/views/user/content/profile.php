@@ -5,7 +5,7 @@
       <div class="container py-4">
         <h2>Halo Aula Kharismah !</h2>
         <p>Yuk, unggah sumber belajarmu! <br> Bantu warga Fasilkom yang lain dalam belajar supaya bisa jago kayak kamu</p>
-        <button class="btn btn-light mt-3">Unggah Sekarang</button>
+        <a href="<?= base_url() ?>home/upload" class="btn btn-light mt-3">Unggah Sekarang</a>
       </div>
     </div><!-- End Breadcrumbs -->
 

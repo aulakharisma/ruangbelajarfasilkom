@@ -21,14 +21,14 @@ body {
 }
 
 a {
-  /* color: #5fcf80; */
-  color: #F87D09;
+  color: #5fcf80;
+  /* color: #F87D09; */
   text-decoration: none;
 }
 
 a:hover {
-  /* color: #86db9f; */
-  color: #F87D09;
+  color: #86db9f;
+  /* color: #F87D09; */
   text-decoration: none;
 }
 
@@ -66,8 +66,8 @@ h6 {
 }
 
 .back-to-top:hover {
-  /* background: #7ed899; */
-  background: #F87D09;
+  background: #7ed899;
+  /* background: #F87D09; */
   color: #fff;
 }
 
@@ -95,8 +95,8 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  /* border: 6px solid #5fcf80; */
-  border: 6px solid #F87D09;
+  border: 6px solid #5fcf80;
+  /* border: 6px solid #F87D09; */
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -147,8 +147,8 @@ h6 {
 }
 
 #header .logo a {
-  /* color: #5fcf80; */
-  color: var(--p-color);
+  color: #5fcf80;
+  /* color: var(--p-color); */
 }
 
 #header .logo img {
@@ -161,8 +161,8 @@ h6 {
 
 .get-started-btn {
   margin-left: 22px;
-  /* background: #5fcf80; */
-  background: #F87D09;
+  background: #5fcf80;
+  /* background: #F87D09; */
   color: var(--s-color);
   border-radius: 50px;
   padding: 8px 25px;
@@ -173,8 +173,8 @@ h6 {
 }
 
 .get-started-btn:hover {
-  /* background: #3ac162; */
-  background: #F87D09;
+  background: #3ac162;
+  /* background: #F87D09; */
   color: #fff;
 }
 
@@ -232,8 +232,8 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  /* color: #5fcf80; */
-  color: #F87D09;
+  color: #5fcf80;
+  /* color: #F87D09; */
 }
 
 .navbar .dropdown ul {
