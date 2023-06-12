@@ -10,12 +10,12 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="index.html">Beranda</a></li>
+          <li><a class="active" href="<?= base_url() ?>home">Beranda</a></li>
           <li><a href="<?= base_url() ?>home/materi">Materi</a></li>
           <li><a href="<?= base_url() ?>home/kategori">Kategori</a></li>
           <li class="dropdown"><a href="#"><span><i class="bi bi-person-circle ps-5" style="font-size : 2rem"></i></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Profile</a></li>
+              <li><a href="<?= base_url()?>home/profile">Profile</a></li>
               <li><a href="#">Logout</a></li>
             </ul>
           </li>

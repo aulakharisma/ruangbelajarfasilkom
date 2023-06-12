@@ -4,7 +4,7 @@
     <div class="breadcrumbs">
       <div class="container py-4 text-start">
         <h2>Struktur Data</h2>
-        <p style="font-size:16px; max-width:80%; line-height: 1.7;">Matakuliah ini sebagian besar teori yang diikuti dengan praktikum. Melalui Matakuliah ini mahasiswa mampu untuk memahami konsep, teknik dan manipulasi pengorganisasian sebuah data yang diimplementasikan kedalam sebuah bahasa pemrograman seperti array, string, matriks, record. Selain itu matakuliah ini juga memberi pemahaman tentang list linear, multi link list, non linier link list, jenis-jenis pengurutan, pencarian, graf, dan tree.</p>
+        <p style="font-size:14px; max-width:80%; line-height: 1.7;">Matakuliah ini sebagian besar teori yang diikuti dengan praktikum. Melalui Matakuliah ini mahasiswa mampu untuk memahami konsep, teknik dan manipulasi pengorganisasian sebuah data yang diimplementasikan kedalam sebuah bahasa pemrograman seperti array, string, matriks, record. Selain itu matakuliah ini juga memberi pemahaman tentang list linear, multi link list, non linier link list, jenis-jenis pengurutan, pencarian, graf, dan tree.</p>
       </div>
     </div><!-- End Breadcrumbs -->
 

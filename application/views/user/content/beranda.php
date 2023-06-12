@@ -2,7 +2,7 @@
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Unggah Tugas dan Materimu<br>di Ruang Belajar Sekarang !</h1>
-      <a href="courses.html" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
+      <a href="<?= base_url() ?>home/upload" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
     </div>
   </section><!-- End Hero -->
 
@@ -27,7 +27,7 @@
                   <h4>UI UX</h4>
                 </div>
 
-                <h3><a href="course-details.html">Materi - Prototyping Design di Figma</a></h3>
+                <h3><a href="<?= base_url() ?>home/detailmateri">Materi - Prototyping Design di Figma</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
@@ -50,7 +50,7 @@
                   <h4>Data Analis</h4>
                 </div>
 
-                <h3><a href="course-details.html">Tugas - Cleaning Data menggunakan tensorflow</a></h3>
+                <h3><a href="<?= base_url() ?>home/detailmateri">Tugas - Cleaning Data menggunakan tensorflow</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
@@ -74,7 +74,7 @@
                   <h4>Artficial Intelligent</h4>
                 </div>
 
-                <h3><a href="course-details.html">Tugas - Perkiraan cuaca di Surabaya</a></h3>
+                <h3><a href="<?= base_url() ?>home/detailmateri">Tugas - Perkiraan cuaca di Surabaya</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
@@ -157,7 +157,7 @@
               <h3><a href="<?= base_url() ?>home/detailkategori">Metode Numerik</a></h3>
             </div>
           </div>
-          <a href="#" style="margin-top:2rem; font-weight:600 ;"><p>Lihat Semua Kategori >></p></a>
+          <a href="<?= base_url() ?>home/kategori" style="margin-top:2rem; font-weight:600 ;"><p>Lihat Semua Kategori >></p></a>
 
         </div>
 

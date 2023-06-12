@@ -45,4 +45,18 @@ class Home extends CI_Controller {
 		$this->load->view('user/content/upload-materi');
 		$this->load->view('user/template/footer');
 	}
+	public function edit()
+	{	
+		$this->load->view('user/template/header');
+		$this->load->view('user/template/navbar');
+		$this->load->view('user/content/edit-materi');
+		$this->load->view('user/template/footer');
+	}
+	public function profile()
+	{	
+		$this->load->view('user/template/header');
+		$this->load->view('user/template/navbar');
+		$this->load->view('user/content/profile');
+		$this->load->view('user/template/footer');
+	}
 }
