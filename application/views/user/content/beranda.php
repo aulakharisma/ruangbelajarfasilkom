@@ -2,13 +2,13 @@
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Unggah Tugas dan Materimu<br>di Ruang Belajar Sekarang !</h1>
-      <a href="<?= base_url() ?>home/upload" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
+      <a href="upload" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
 
-  <!-- ======= Popular Courses Section ======= -->
+    <!-- ======= Popular Courses Section ======= -->
     <section id="popular-courses" class="courses">
       <div class="container" data-aos="fade-up">
 
@@ -91,7 +91,9 @@
             </div>
           </div> <!-- End Course Item-->
 
-          <a href="http://localhost/ruangbelajarfasilkom/home/materi" style="margin-top:2rem; font-weight:600 ;"><p>Lihat Semua Materi >></p></a>
+          <a href="http://localhost/ruangbelajarfasilkom/home/materi" style="margin-top:2rem; font-weight:600 ;">
+            <p>Lihat Semua Materi >></p>
+          </a>
         </div>
 
 
@@ -103,7 +105,7 @@
     <section id="features" class="features mt-5">
       <div class="container" data-aos="fade-up">
 
-      <div class="section-title">
+        <div class="section-title">
           <h2>Kategori Mata Kuliah</h2>
           <p>Mata Kuliah</p>
         </div>
@@ -157,7 +159,9 @@
               <h3><a href="<?= base_url() ?>home/detailkategori">Metode Numerik</a></h3>
             </div>
           </div>
-          <a href="<?= base_url() ?>home/kategori" style="margin-top:2rem; font-weight:600 ;"><p>Lihat Semua Kategori >></p></a>
+          <a href="<?= base_url() ?>home/kategori" style="margin-top:2rem; font-weight:600 ;">
+            <p>Lihat Semua Kategori >></p>
+          </a>
 
         </div>
 
