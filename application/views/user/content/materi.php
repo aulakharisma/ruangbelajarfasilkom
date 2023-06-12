@@ -16,8 +16,8 @@
           <h2>Materi</h2>
           <p>Semua Materi</p>
         </div>
-        <form action="" method="post" class="mb-4">
-          <input type="text" class="py-2 rounded" style="border :1px solid #cfcfcf; width:50%;" name="text">
+        <form action="" method="get" class="mb-4">
+          <input type="text" name="keyword" placeholder="Masukkan kata kunci" class="py-2 px-4 rounded" style="border :1px solid #cfcfcf; width:50%;" name="text">
           <input type="submit" value="Search" class="py-2 px-3 rounded" style="border:none; background-color:#3ac162; color:#fff; font-weight: 500;">
         </form>
 
