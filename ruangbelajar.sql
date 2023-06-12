@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2023 at 08:50 AM
+-- Generation Time: Jun 12, 2023 at 04:50 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -102,18 +102,19 @@ INSERT INTO `matkul` (`id`, `nama_matkul`, `deskripsi`, `prodi`, `CREATED_AT`, `
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `tipe` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, '20081010192', 'passowrd192'),
-(2, '20081010193', 'password193'),
-(3, '20082010102', 'password102'),
-(4, '20083010090', 'password090');
+INSERT INTO `users` (`id`, `username`, `password`, `tipe`) VALUES
+(1, '20081010192', 'passowrd192', 1),
+(2, '20081010193', 'password193', 1),
+(3, '20082010102', 'password102', 1),
+(4, '20083010090', 'password090', 1);
 
 -- --------------------------------------------------------
 
