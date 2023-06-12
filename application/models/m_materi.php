@@ -9,7 +9,7 @@ class m_materi extends CI_Model
 
     public function get_rawSQL()
     {
-        $sql = "SELECT * FROM materi";
+        $sql = "SELECT * FROM materi, matkul WHERE materi.id_matkul = matkul.id";
         return $this->db->query($sql)->result();
     }
 
