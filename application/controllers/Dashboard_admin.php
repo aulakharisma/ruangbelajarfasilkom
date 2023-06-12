@@ -3,8 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard_admin extends CI_Controller {
 
+	function __construct(){
+        parent::__construct();
+        if(!$this->session->has_userdata('id')){
+            redirect('login');
+        }
+		if($this->session->userdata('tipe') != '1'){
+			redirect('login');
+		}
+    }
+
 	public function index()
 	{
+		$data['user'] = $this->db->get_where('users', ['id' => $this->session->userdata('id')])->row_array();
+		
 		$this->load->view('admin/template/header');
 		$this->load->view('admin/template/sidebar');
 		$this->load->view('admin/content/dashboard');
