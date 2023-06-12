@@ -53,4 +53,13 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['home'] = 'Home/index';
+$route['materi'] = 'Materi/index';
+$route['kategori'] = 'Kategori/index';
+$route['detail_materi'] = 'Detail_Materi/index';
+$route['detail_kategori'] = 'Detail_Kategori/index';
+$route['upload'] = 'Upload/index';
+$route['edit'] = 'Edit/index';
+$route['profile'] = 'Profile/index';
+
 $route['login'] = 'Login/index';

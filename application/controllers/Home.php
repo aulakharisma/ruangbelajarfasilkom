@@ -10,12 +10,6 @@ class Home extends CI_Controller {
 		$this->load->view('user/content/beranda');
 		$this->load->view('user/template/footer');
 	}
-	public function materi()
-	{
-		$this->load->view('user/template/header');
-		$this->load->view('user/template/navbar');
-		$this->load->view('user/content/materi');
-		$this->load->view('user/template/footer');
 	}
 	public function detailMateri()
 	{	

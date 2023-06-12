@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -26,6 +23,6 @@
   <link href="<?= base_url('asset/user-template') ?>/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="<?=base_url('asset/user-template') ?>/assets/css/style.css" rel="stylesheet">
+  <link href="<?= base_url('asset/user-template') ?>/assets/css/style.css" rel="stylesheet">
   <!-- <link href="asset/custom-css/style.css" rel="stylesheet"> -->
 </head>
