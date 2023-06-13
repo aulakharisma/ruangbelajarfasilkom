@@ -21,7 +21,7 @@
               <hr>
 
               <li><a href="<?= base_url() ?>profile">Profile</a></li>
-              <li><a href="#">Logout</a></li>
+              <li><a href="login/logout">Logout</a></li>
             </ul>
           </li>
 

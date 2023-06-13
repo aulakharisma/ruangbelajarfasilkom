@@ -38,6 +38,7 @@ class login extends CI_Controller {
 						'id' => $user['id'],
 						'tipe' => $user['tipe']
 					];
+					$this->session->sess_expiration = '5';
 					$this->session->set_userdata($data);
 					if ($user['tipe'] == 1){
 						redirect('Dashboard_admin', 'refresh');
@@ -65,7 +66,7 @@ class login extends CI_Controller {
     }
 
 	public function testing(){
-	$this->load->view('auth/login');
+	$this->load->view('auth/auth');
 	}
 
 }

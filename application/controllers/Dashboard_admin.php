@@ -5,6 +5,7 @@ class Dashboard_admin extends CI_Controller {
 
 	function __construct(){
         parent::__construct();
+		$this->load->model('Db');
         if(!$this->session->has_userdata('id')){
             redirect('login');
         }
@@ -77,5 +78,9 @@ class Dashboard_admin extends CI_Controller {
 		$this->load->view('admin/template/sidebar');
 		$this->load->view('admin/content/edit-materi');
 		$this->load->view('admin/template/footer');
+	}
+	public function logout()
+	{
+		redirect(login);
 	}
 }

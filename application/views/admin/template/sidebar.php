@@ -117,7 +117,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="logout" class="nav-link">
               <i class="fa-solid fa-right-from-bracket"></i>
               <p>
                 Logout
