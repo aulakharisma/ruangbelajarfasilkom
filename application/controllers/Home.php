@@ -16,7 +16,7 @@ class Home extends CI_Controller
 		$total1 = $this->m_materi->count_user();
 		$total2 = $this->m_materi->count();
 		$total3 = $this->m_matkul->count();
-		$result['materi'] = $this->m_materi->get_rawSQL();
+		$result['materi'] = $this->m_materi->get_rawSQL2();
 		$result['matkul'] = $this->m_matkul->get_rawSQL();
 		$result['total2'] = $total2;
 		$result['total3'] = $total3;

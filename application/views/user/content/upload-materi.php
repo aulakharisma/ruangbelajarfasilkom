@@ -11,7 +11,7 @@
     <div class="container my-5">
         <h4 class="my-3"><b>Unggah Materi/Tugas</b></h4>
         <div class="row">
-            <form Action="<?php echo base_url() ?>Materi/add" method="POST">
+            <form Action="<?php echo base_url() ?>Materi/add" method="POST" enctype="multipart/form-data">
                 <div class="col-md-7 col-12">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Judul Materi/Tugas/Sumber Belajar</label>
@@ -41,20 +41,22 @@
                         <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desk_materi"></textarea>
                     </div>
-                    <!-- <div class="mb-3">
-                        <label for="formFile" class="form-label">Pilih File</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
+
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Pilih Sampull</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div> -->
+                        <label for="formFile1" class="form-label">Pilih File</label>
+                        <input class="form-control" type="file" name="file_upload1" id="formFile1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formFile2" class="form-label">Pilih Sampull</label>
+                        <input class="form-control" type="file" name="file_upload2" id="formFile2">
+                    </div>
+
                     <div class="text-center d-grid gap-2">
                         <button class="btn btn-success rounded-0" type="submit">Add Data</button>
                     </div>
             </form>
         </div>
-    </div>
     </div>
 
 </main><!-- End #main -->

@@ -7,7 +7,6 @@ class Materi extends CI_Controller
         parent::__construct();
         $this->load->model('m_materi');
         $this->load->model('m_matkul');
-        $this->load->model('m_user');
     }
 
     public function index()
@@ -20,8 +19,35 @@ class Materi extends CI_Controller
     {
         if ($this->input->post()) {
             $data_add = $this->input->post();
-            $this->m_materi->insert($data_add);
-            redirect('Materi/index');
+            $config1['upload_path'] = './upload/dokumen';
+            $config1['allowed_types'] = 'pdf';
+            $config1['max_size'] = 2048;
+            $this->load->library('upload', $config1);
+
+            if (!$this->upload->do_upload('file_upload1')) {
+                $error = array('error' => $this->upload->display_errors());
+                // Tambahkan penanganan kesalahan di sini (misalnya, menampilkan pesan error)
+            } else {
+                $file_data1 = $this->upload->data();
+                $data_add['cover'] = $file_data1['file_name'];
+
+                // Konfigurasi untuk upload kedua
+                $config2['upload_path'] = './upload/cover'; // Ganti dengan path penyimpanan file di laptop
+                $config2['allowed_types'] = 'jpg|pdf';
+                $config2['max_size'] = 2048;
+                $this->upload->initialize($config2);
+
+                if (!$this->upload->do_upload('file_upload2')) {
+                    $error = array('error' => $this->upload->display_errors());
+                    // Tambahkan penanganan kesalahan di sini (misalnya, menampilkan pesan error)
+                } else {
+                    $file_data2 = $this->upload->data();
+                    $data_add['dok_materi'] = $file_data2['file_name'];
+
+                    $this->m_materi->insert($data_add);
+                    redirect('Materi/index');
+                }
+            }
         } else {
             $data['matkul'] = $this->m_matkul->get_rawSQL();
             $data['materi'] = $this->m_materi->get_rawSQL();

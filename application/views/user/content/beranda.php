@@ -38,7 +38,7 @@
                       <span>Antonio</span>
                     </div>
                     <div class="trainer-rank d-flex align-items-center">
-                      <i class="bi bi-calendar-check"></i>&nbsp;<small><?= $mtr->CREATED_AT ?></small>
+                      <i class="bi bi-calendar-check"></i>&nbsp;<small><?= $mtr->CREATED_MTR ?></small>
                     </div>
                   </div>
                 </div>

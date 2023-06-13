@@ -40,13 +40,13 @@ class m_materi extends CI_Model
     public function count_user()
     {
         $this->db->where('tipe', 2);
-        return $count = $this->db->count_all_results('users');
+        return $this->db->count_all_results('users');
     }
 
     public function insert($data)
     {
-        $sql = "INSERT INTO materi (judul, id_matkul, kategori, desk_materi) VALUES (?,?,?,?)";
-        $this->db->query($sql, array($data['judul'], $data['id_matkul'], $data['kategori'], $data['desk_materi']));
+        $sql = "INSERT INTO materi (judul, id_matkul, kategori, desk_materi, cover, dok_materi) VALUES (?,?,?,?,?,?)";
+        $this->db->query($sql, array($data['judul'], $data['id_matkul'], $data['kategori'], $data['desk_materi'], $data['cover'], $data['dok_materi']));
     }
 
     public function get_ID($id)
