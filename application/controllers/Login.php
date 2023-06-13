@@ -32,7 +32,7 @@ class login extends CI_Controller {
 			
 			if($user){
 				/* ganti ke password_verivy() kalau passnya udah di hash */
-				if($password == $user['password']){
+				if(password_verify($password, $user['password'])){
 					$data = [
 						'username' => $user['username'],
 						'id' => $user['id'],

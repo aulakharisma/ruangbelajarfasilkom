@@ -46,10 +46,26 @@ class Dashboard_admin extends CI_Controller {
 	}
 	public function registrasi()
 	{
-		$this->load->view('admin/template/header');
-		$this->load->view('admin/template/sidebar');
-		$this->load->view('admin/content/registrasi-user');
-		$this->load->view('admin/template/footer');
+			if ($this->input->post()) {
+				$data = [
+					'username' => $this->input->post('username_r'),
+					'password' => password_hash($this->input->post('password_r'), PASSWORD_DEFAULT),
+					'nama' => $this->input->post('nama_r'),
+					'prodi' => $this->input->post('prodi_r'),
+					'tipe' => $this->input->post('tipe_r'),
+				];
+				$this->db->insert('users', $data);
+				$this->load->view('admin/template/header');
+				$this->load->view('admin/template/sidebar');
+				$this->load->view('admin/content/dashboard');
+				$this->load->view('admin/template/footer');
+			} 
+			else {
+				$this->load->view('admin/template/header');
+				$this->load->view('admin/template/sidebar');
+				$this->load->view('admin/content/registrasi-user');
+				$this->load->view('admin/template/footer');
+			}
 	}
 	public function addmatkul()
 	{
