@@ -17,21 +17,29 @@
                         <label for="exampleFormControlInput1" class="form-label">Judul Materi/Tugas/Sumber Belajar</label>
                         <input type="text" class="form-control" name="judul" id="exampleFormControlInput1">
                     </div>
-                    <!-- <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Pilih Mata Kuliah</label>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Mata Kuliah</label>
                         <select class="form-select" aria-label="Default select example" name="id_matkul">
+                            <option disabled selected>Pilih Mata Kuliah</option>
                             <?php foreach ($matkul as $key => $mk) : ?>
-                                <option><?php $mk->id_matkul ?></option>
+                                <option value="<?= $mk->id_matkul ?>"> <?= $mk->nama_matkul ?></option>
                             <?php endforeach ?>
                         </select>
-                    </div> -->
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Judul Materi/Tugas/Sumber Belajar</label>
-                        <input type="text" class="form-control" name="kategori" id="exampleFormControlInput1">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Kategori</label>
+                        <select class="form-select" aria-label="Default select example" name="kategori">
+                            <option disabled selected>Pilih Kategori</option>
+                            <?php foreach ($enum_values as $enum) : ?>
+                                <option value="<?php echo $enum; ?>"><?php echo $enum; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="desk_materi"></textarea>
                     </div>
                     <!-- <div class="mb-3">
                         <label for="formFile" class="form-label">Pilih File</label>

@@ -12,7 +12,7 @@ class Materi extends CI_Controller
 
     public function index()
     {
-        $result['materi'] = $this->m_materi->get_rawSQL();
+        $result['materi'] = $this->m_materi->get_rawSQL2();
         $this->template->render('user/content/materi', $result);
     }
 
@@ -23,9 +23,9 @@ class Materi extends CI_Controller
             $this->m_materi->insert($data_add);
             redirect('Materi/index');
         } else {
-            $data['user'] = $this->m_user->get_rawSQL();
             $data['matkul'] = $this->m_matkul->get_rawSQL();
-            $data['materi'] = $this->m_materi->get_rawSQL2();
+            $data['materi'] = $this->m_materi->get_rawSQL();
+            $data['enum_values'] = $this->m_materi->get_enum('materi', 'kategori');
             $this->template->render('user/content/upload-materi', $data);
         }
     }
