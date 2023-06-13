@@ -21,7 +21,7 @@ class Materi extends CI_Controller
     //     if ($this->input->post()) {
     //         $data = $this->input->post();
     //         $this->m_materi->input($data);
-    //         redirect('Materi/show');
+    //         redirect('Materi/index');
     //     } else {
     //         $this->load->view('upload');
     //     }
