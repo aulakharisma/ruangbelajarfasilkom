@@ -58,7 +58,6 @@ $route['materi'] = 'Materi/index';
 $route['kategori'] = 'Kategori/index';
 $route['detail_materi'] = 'Detail_Materi/index';
 $route['detail_kategori'] = 'Detail_Kategori/index';
-$route['upload'] = 'Upload/index';
 $route['edit'] = 'Edit/index';
 $route['profile'] = 'Profile/index';
 

@@ -23,7 +23,7 @@
           <div class="col-lg-3 col-md-4 mb-4 mt-md-0">
             <div class="icon-box">
               <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-              <h3><a href="detail_kategori"><?= $mk->nama_matkul; ?></a></h3>
+              <h3><a href="<?= base_url() ?>detail_kategori"><?= $mk->nama_matkul; ?></a></h3>
             </div>
           </div>
         <?php } ?>

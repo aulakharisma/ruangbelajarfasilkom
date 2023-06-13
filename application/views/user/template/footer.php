@@ -19,9 +19,9 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Beranda</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Materi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Kategori</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url() ?>home">Beranda</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url() ?>materi">Materi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<?= base_url() ?>kategori">Kategori</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>

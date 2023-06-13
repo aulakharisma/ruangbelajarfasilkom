@@ -9,13 +9,30 @@ class m_materi extends CI_Model
 
     public function get_rawSQL()
     {
-        $sql = "SELECT * FROM materi, matkul WHERE materi.id_matkul = matkul.id";
+        $sql = "SELECT * FROM materi, matkul WHERE materi.id_matkul = matkul.id_matkul";
         return $this->db->query($sql)->result();
     }
 
-    public function add($data)
+    public function get_rawSQL2()
     {
-        $sql = "INSERT INTO materi (id, id_admin, id_user, judul, id_matkul, dok_materi, kategori, deskripsi, cover, CREATED_AT, UPDATED_AT) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-        $this->db->query($sql, array($data['id'], $data['id_admin'], $data['id_user'], $data['judul'], $data['id_matkul'], $data['dok_materi'], $data['kategori'], $data['deskripsi'], $data['cover'], $data['CREATED_AT'], $data['UPDATED_AT']));
+        $sql = "SELECT * FROM materi";
+        return $this->db->query($sql)->result();
+    }
+
+    public function count()
+    {
+        return $this->db->count_all('materi');
+    }
+
+    public function count_user()
+    {
+        $this->db->where('tipe', 2);
+        return $count = $this->db->count_all_results('users');
+    }
+
+    public function insert($data)
+    {
+        $sql = "INSERT INTO materi (judul, id_matkul, kategori, desk_materi) VALUES (?,?,?,?)";
+        $this->db->query($sql, array($data['judul'], $data['id_matkul'], $data['kategori'], $data['desk_materi']));
     }
 }

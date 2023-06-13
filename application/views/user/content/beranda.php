@@ -2,7 +2,7 @@
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Unggah Tugas dan Materimu<br>di Ruang Belajar Sekarang !</h1>
-      <a href="upload" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
+      <a href="Materi/add" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
     </div>
   </section><!-- End Hero -->
 
@@ -31,7 +31,7 @@
                   </div>
 
                   <h3><a href="<?= base_url() ?>home/detailmateri"><?= $mtr->kategori ?> - <?= $mtr->judul ?></a></h3>
-                  <p><?= $mtr->deskripsi ?></p>
+                  <p><?= $mtr->desk_materi ?></p>
                   <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-profile d-flex align-items-center">
                       <img src="<?= base_url('asset/user-template') ?>/assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
@@ -46,7 +46,7 @@
             </div> <!-- End Course Item-->
           <?Php } ?>
 
-          <a href="http://localhost/ruangbelajarfasilkom/home/materi" style="margin-top:2rem; font-weight:600 ;">
+          <a href="<?= base_url() ?>materi" style="margin-top:2rem; font-weight:600 ;">
             <p>Lihat Semua Materi >></p>
           </a>
         </div>
@@ -66,55 +66,17 @@
         </div>
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-lg-3 col-md-4">
-            <div class="icon-box">
-              <i class="ri-store-line" style="color: #ffbb2c;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">UI UX</a></h3>
+
+          <?php foreach ($matkul as $key => $mk) { ?>
+            <div class="col-lg-3 col-md-4">
+              <div class="icon-box">
+                <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
+                <h3><a href="<?= base_url() ?>detail_kategori"><?= $mk->nama_matkul; ?></a></h3>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">Data Analis</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">Data Scientist</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">Metode Penelitian</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-database-2-line" style="color: #47aeff;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">Basis Data</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">Etika dan Kompetensi Informatika</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">Kalkulus</a></h3>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4">
-            <div class="icon-box">
-              <i class="ri-price-tag-2-line" style="color: #4233ff;"></i>
-              <h3><a href="<?= base_url() ?>home/detailkategori">Metode Numerik</a></h3>
-            </div>
-          </div>
-          <a href="<?= base_url() ?>home/kategori" style="margin-top:2rem; font-weight:600 ;">
+          <?php } ?>
+
+          <a href="<?= base_url() ?>kategori" style="margin-top:2rem; font-weight:600 ;">
             <p>Lihat Semua Kategori >></p>
           </a>
 
@@ -132,18 +94,18 @@
           <h2 class="text-center"><b>Statistik</b></h2>
 
           <div class="col-lg-4 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $total1; ?>" data-purecounter-duration="1" class="purecounter"></span>
             <p>Pengguna</p>
           </div>
 
           <div class="col-lg-4 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1034" data-purecounter-duration="1" class="purecounter"></span>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $total2; ?>" data-purecounter-duration="1" class="purecounter"></span>
             <p>Materi</p>
           </div>
 
           <div class="col-lg-4 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="107" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Katgori Mata Kuliah</p>
+            <span data-purecounter-start="0" data-purecounter-end="<?php echo $total3; ?>" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Kategori Mata Kuliah</p>
           </div>
 
         </div>
