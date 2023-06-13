@@ -5,27 +5,36 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="post" action="http://localhost/ruangbelajarfasilkom/dashboard_admin/registrasi">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Nama</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="nama_r">Nama</label>
+                    <input type="text" class="form-control" id="nama_r" name="nama_r" placeholder="Masukkan Nama Panggilan">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Username</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="username_r">Username</label>
+                    <input type="text" class="form-control" id="username_r" name="username_r" placeholder="Masukkan Username">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="password_r">Password</label>
+                    <input type="password" class="form-control" id="password_r" name="password_r" placeholder="Masukkan Password">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Program Studi</label>
+                    <label for="prodi_r">Prodi</label>
                     <div class="form-group">
-                        <select class="form-control">
-                          <option>IF</option>
-                          <option>SI</option>
-                          <option>SD</option>
+                        <select type="int" class="form-control" id="prodi_r" name="prodi_r">
+                          <option value="1">Informatika</option>
+                          <option value="2">Sains Data</option>
+                          <option value="3">Sistem Informasi</option>
+                        </select>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="tipe_r">Tipe</label>
+                    <div class="form-group">
+                        <select type="int" class="form-control" id="tipe_r" name="tipe_r">
+                          <option value="1">Admin</option>
+                          <option value="2">User</option>
                         </select>
                       </div>
                   </div>
