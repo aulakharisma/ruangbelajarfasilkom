@@ -21,15 +21,17 @@
                         <label for="exampleFormControlInput1" class="form-label">Judul Materi/Tugas/Sumber Belajar</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1">
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Pilih Mata Kuliah</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">UI UX</option>
-                            <option value="2">Metode Penelitian</option>
-                            <option value="3">Metode Numerik</option>
+
+                    <div class="form-group">
+                        <label for="id_matkul">Nama Matkul</label>
+                        <select name="id_matkul" class="form-control">
+                            <option value="">----- PILIH MATKUL -----</option>
+                            <?php foreach ($matkul as $mk => $value) { ?>
+                                <option value="<?= $value->id ?>"> <?= $value->nama_matkul ?> </option>
+                            <?php } ?>
                         </select>
                     </div>
+
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
