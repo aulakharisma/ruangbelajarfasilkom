@@ -12,7 +12,7 @@ class Materi extends CI_Controller
     public function index() {
         $data = array(
             'title' => 'Materi',
-            'ruangbelajar' => $this->m_materi->getAllData()
+            'materi' => $this->m_materi->getAllData()
         );
         $this->template->render('user/content/materi', $data);
     }

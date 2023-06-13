@@ -35,7 +35,7 @@
                 </div>
 
                 <h3><a href="<?= base_url() ?>detail_materi"><?= $mtr->kategori ?> - <?= $mtr->judul ?></a></h3>
-                <p><?= $mtr->deskripsi ?></p>
+                <p><?= $mtr->deskripsi_materi ?></p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="<?= base_url('asset/user-template') ?>/assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
