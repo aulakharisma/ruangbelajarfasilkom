@@ -43,12 +43,6 @@ class m_materi extends CI_Model
         return $this->db->count_all_results('users');
     }
 
-    public function insert($data)
-    {
-        $sql = "INSERT INTO materi (judul, id_matkul, kategori, desk_materi, cover, dok_materi) VALUES (?,?,?,?,?,?)";
-        $this->db->query($sql, array($data['judul'], $data['id_matkul'], $data['kategori'], $data['desk_materi'], $data['cover'], $data['dok_materi']));
-    }
-
     public function get_ID($id)
     {
         $this->db->select('materi.*, matkul.nama_matkul');
@@ -56,5 +50,11 @@ class m_materi extends CI_Model
         $this->db->join('matkul', 'materi.id_matkul = matkul.id_matkul');
         $this->db->where('materi.id_materi', $id);
         return $this->db->get()->row();
+    }
+
+    public function insert($data)
+    {
+        $sql = "INSERT INTO materi (judul, id_matkul, kategori, desk_materi, cover, dok_materi) VALUES (?,?,?,?,?,?)";
+        $this->db->query($sql, array($data['judul'], $data['id_matkul'], $data['kategori'], $data['desk_materi'], $data['cover'], $data['dok_materi']));
     }
 }
