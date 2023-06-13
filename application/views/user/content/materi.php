@@ -16,10 +16,19 @@
         <h2>Materi</h2>
         <p>Semua Materi</p>
       </div>
-      <form action="<?= base_url()?>materi" method="get" class="mb-4">
-        <input type="text" class="form-control py-2 rounded" style="border :1px solid #cfcfcf; width:50%;" name="keyword" placeholder="Masukkan kata kunci ...">
-        <input type="submit" value="Search" class="py-2 px-3 rounded" style="border:none; background-color:#3ac162; color:#fff; font-weight: 500;">
-      </form>
+      
+      <div class="row">
+        <div class="col-md-5">
+          <form action="<?= base_url('materi'); ?>" method="post">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Masukkan Kata Kunci" name="keyword">
+              <div class="input-group-append">
+                <button class="btn btn-success" type="submit" name="submit">search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
 
       <div class="row" data-aos="zoom-in" data-aos-delay="100">
 

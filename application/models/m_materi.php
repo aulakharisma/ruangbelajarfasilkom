@@ -55,6 +55,14 @@ class m_materi extends CI_Model
         return $this->db->get()->result();
     }
 
+    public function searchMateri() {
+        $keyword=$this->input->post('keyword', false);
+        $this->db->like('judul', $keyword);
+        $this->db->or_like('kategori', $keyword);
+
+        return $this->db->get('materi')->result_array();
+    }
+
     public function getIdUtama($id)
     {
         return $this->db->get_where($this->_table, ["id_materi" => $id]) -> row();

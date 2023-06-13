@@ -15,9 +15,9 @@
           <li><a href="<?= base_url() ?>kategori">Kategori</a></li>
           <li class="dropdown"><a href="#"><span><i class="bi bi-person-circle ps-5" style="font-size : 2rem"></i></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="px-3 my-0 py-0"><p><b>Farhan Pradana Rahmansyah Aditya</b></p></li>
-              <li class="px-3 my-0 py-0"><p>20081010100</p></li>
-              <li class="px-3 my-0 py-0">Informatika</li>
+              <li class="px-3 my-0 py-0"><p><b><?= $session_user->nama ?></b></p></li>
+              <li class="px-3 my-0 py-0"><p><?= $session_user->username ?></p></li>
+              <li class="px-3 my-0 py-0"><?= $session_user->prodi ?></li>
               <hr>
 
               <li><a href="<?= base_url() ?>profile">Profile</a></li>

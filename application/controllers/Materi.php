@@ -7,13 +7,20 @@ class Materi extends CI_Controller
         parent::__construct();
         $this->load->model("m_materi");
         $this->load->model("M_Matkul");
+        $this->load->model("M_Profile");
     }
 
     public function index() {
         $data = array(
             'title' => 'Materi',
-            'materi' => $this->m_materi->getAllData()
+            'materi' => $this->m_materi->getAllData(),
+            'materi_user' => $this->db->get_where('materi', ['id' => $this->session->userdata('id')])->row()
         );
+
+        if( $this->input->post('keyword')) {
+            $data['materi'] = $this->m_materi->searchMateri();
+        }
+
         $this->template->render('user/content/materi', $data);
     }
 
