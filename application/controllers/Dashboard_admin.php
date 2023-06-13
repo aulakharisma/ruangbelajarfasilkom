@@ -47,7 +47,7 @@ class Dashboard_admin extends CI_Controller {
 				$this->temp->show('admin/content/dashboard');
 			} 
 			else {
-				$this->temp->show('admin/content/dashboard');
+				$this->temp->show('admin/content/registrasi-user');
 			}
 	}
 	public function addmatkul()
