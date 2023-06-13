@@ -50,9 +50,32 @@ class Dashboard_admin extends CI_Controller {
 		$this->load->view('admin/content/registrasi-user');
 		$this->load->view('admin/template/footer');
 	}
-	public function Login()
+	public function addmatkul()
 	{
 		$this->load->view('admin/template/header');
-		$this->load->view('admin/content/login');
+		$this->load->view('admin/template/sidebar');
+		$this->load->view('admin/content/tambah-matkul');
+		$this->load->view('admin/template/footer');
+	}
+	public function addmateri()
+	{
+		$this->load->view('admin/template/header');
+		$this->load->view('admin/template/sidebar');
+		$this->load->view('admin/content/tambah-materi');
+		$this->load->view('admin/template/footer');
+	}
+	public function editmatkul()
+	{
+		$this->load->view('admin/template/header');
+		$this->load->view('admin/template/sidebar');
+		$this->load->view('admin/content/edit-matkul');
+		$this->load->view('admin/template/footer');
+	}
+	public function editmateri()
+	{
+		$this->load->view('admin/template/header');
+		$this->load->view('admin/template/sidebar');
+		$this->load->view('admin/content/edit-materi');
+		$this->load->view('admin/template/footer');
 	}
 }

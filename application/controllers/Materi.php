@@ -14,6 +14,8 @@ class Materi extends CI_Controller
         $this->template->render('user/content/materi', $result);
     }
 
+    
+
     // public function add()
     // {
     //     if ($this->input->post()) {

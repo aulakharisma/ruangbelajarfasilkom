@@ -8,9 +8,14 @@
       background-color: #f8f8f8;
       font-family: Arial, sans-serif;
     }
+    img {
+      margin-top: 100px;
+      width : 20rem;
+      margin-left: 9rem;
+    }
 
     .login-container {
-      margin-top: 150px;
+      margin-top: 40px;
       max-width: 400px;
       padding: 20px;
       background-color: #fff;
@@ -19,8 +24,8 @@
     }
 
     .login-container h2 {
-      text-align: center;
-      margin-bottom: 30px;
+      text-align: left;
+      margin: 20px 0;
     }
 
     .login-form .form-group {
@@ -49,6 +54,7 @@
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
+      margin-bottom: 4rem;
     }
   </style>
 </head>
@@ -56,6 +62,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
+        <img src="asset/img/logo-horizontal-b-g-k.png" alt="Logo" class="text-center">
         <div class="login-container">
           <h2>Login</h2>
           <form class="login-form" method="post" action="http://localhost/ruangbelajarfasilkom/login/logins">

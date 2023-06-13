@@ -35,7 +35,7 @@
                   <div class="trainer d-flex justify-content-between align-items-center">
                     <div class="trainer-profile d-flex align-items-center">
                       <img src="<?= base_url('asset/user-template') ?>/assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
-                      <span>Antonio</span>
+                      <span>Aula Kharismah</span>
                     </div>
                     <div class="trainer-rank d-flex align-items-center">
                       <i class="bi bi-calendar-check"></i>&nbsp;<small><?= $mtr->CREATED_AT ?></small>

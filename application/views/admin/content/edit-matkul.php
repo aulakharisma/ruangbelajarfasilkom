@@ -1,4 +1,4 @@
-<h3>Tambah Data Matkul</h3>
+<h3>Edit Data Matkul</h3>
 
 <?php if ($this->session->flashdata('success')): ?>
 				<div class="alert alert-success" role="alert">
@@ -36,5 +36,5 @@
 	</div>
 
   
-  <input class="btn btn-success" type="submit" name="btn" value="Submit"/>
+  <input class="btn btn-success" type="submit" name="btn" value="Save"/>
 </form>
