@@ -2,7 +2,7 @@
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Unggah Tugas dan Materimu<br>di Ruang Belajar Sekarang !</h1>
-      <a href="upload" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
+      <a href="#" class="btn-get-started">Unggah Sekarang <i class="bi bi-arrow-right-short"></i></a>
     </div>
   </section><!-- End Hero -->
 
