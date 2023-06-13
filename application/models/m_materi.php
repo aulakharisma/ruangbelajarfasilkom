@@ -51,7 +51,10 @@ class m_materi extends CI_Model
 
     public function get_ID($id)
     {
-        $data = $this->db->query("SELECT * FROM materi WHERE id_materi='$id'");
-        return $data->result();
+        $this->db->select('materi.*, matkul.nama_matkul');
+        $this->db->from('materi');
+        $this->db->join('matkul', 'materi.id_matkul = matkul.id_matkul');
+        $this->db->where('materi.id_materi', $id);
+        return $this->db->get()->row();
     }
 }

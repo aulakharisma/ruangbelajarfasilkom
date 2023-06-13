@@ -29,12 +29,12 @@ class Materi extends CI_Controller
                 // Tambahkan penanganan kesalahan di sini (misalnya, menampilkan pesan error)
             } else {
                 $file_data1 = $this->upload->data();
-                $data_add['cover'] = $file_data1['file_name'];
+                $data_add['dok_materi'] = $file_data1['file_name'];
 
                 // Konfigurasi untuk upload kedua
                 $config2['upload_path'] = './upload/cover'; // Ganti dengan path penyimpanan file di laptop
                 $config2['allowed_types'] = 'jpg|pdf';
-                $config2['max_size'] = 2048;
+                $config2['max_size'] = 6144;
                 $this->upload->initialize($config2);
 
                 if (!$this->upload->do_upload('file_upload2')) {
@@ -42,7 +42,7 @@ class Materi extends CI_Controller
                     // Tambahkan penanganan kesalahan di sini (misalnya, menampilkan pesan error)
                 } else {
                     $file_data2 = $this->upload->data();
-                    $data_add['dok_materi'] = $file_data2['file_name'];
+                    $data_add['cover'] = $file_data2['file_name'];
 
                     $this->m_materi->insert($data_add);
                     redirect('Materi/index');
@@ -53,6 +53,20 @@ class Materi extends CI_Controller
             $data['materi'] = $this->m_materi->get_rawSQL();
             $data['enum_values'] = $this->m_materi->get_enum('materi', 'kategori');
             $this->template->render('user/content/upload-materi', $data);
+        }
+    }
+
+    public function download($filename)
+    {
+        $file_path = './upload/dokumen/' . $filename;
+
+        if (file_exists($file_path)) {
+            // Lakukan proses unduh file
+            header('Content-Type: application/octet-stream');
+            header('Content-Disposition: attachment; filename="' . basename($file_path) . '"');
+            readfile($file_path);
+        } else {
+            // File tidak ditemukan, tampilkan pesan error atau redirect ke halaman tertentu
         }
     }
 }

@@ -28,13 +28,13 @@
         ?>
           <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
             <div class="course-item">
-              <img src="<?= base_url('asset/user-template') ?>/assets/img/course-1.jpg" class="img-fluid" alt="...">
+              <img src="<?= base_url('./upload/cover/' . $mtr->cover) ?>" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                   <h4><?= $mtr->nama_matkul ?></h4>
                 </div>
 
-                <h3><a href="<?= base_url() ?>detail_materi"><?= $mtr->kategori ?> - <?= $mtr->judul ?></a></h3>
+                <h3><a href="<?= base_url('detail_materi/index/' . $mtr->id_materi) ?>"><?= $mtr->kategori ?> - <?= $mtr->judul ?></a></h3>
                 <p><?= $mtr->desk_materi ?></p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
