@@ -16,7 +16,7 @@
           <li class="dropdown"><a href="#"><span><i class="bi bi-person-circle ps-5" style="font-size : 2rem"></i></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="<?= base_url() ?>profile">Profile</a></li>
-              <li><a href="#">Logout</a></li>
+              <li><a href="login/logout">Logout</a></li>
             </ul>
           </li>
 
