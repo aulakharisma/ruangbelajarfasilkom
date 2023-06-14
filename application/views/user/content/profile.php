@@ -17,33 +17,34 @@
           <h2>Materi yang sudah kamu unggah</h2>
           <p>Materi</p>
         </div>
-
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
-        <table id="example1" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>id materi</th>
-                    <th>id user</th>
-                    <th>Judul</th>
-                    <th>id matkul</th>
-                    <th>kategori</th>
-                    <th>kategori</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                    <?php foreach ($alpha as $trans): ?>
-                        <tr>
-                            <td><?php echo $trans->id_materi ?></td>
-                            <td><?php echo $trans->id_admin ?></td>
-                            <td><?php echo $trans->judul ?></td>
-                            <td><?php echo $trans->id_matkul ?></td>
-                            <td><?php echo $trans->kategori ?></td>
-                            <td><a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
-                            <a href="<?=base_url()?>dashboard_admin/editmateri" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a></td>
-                    <?php endforeach?>
-                </tbody>
-                </table>
-        </div> <!-- End Course Item-->
+
+        <?php foreach ($alpha as $trans): ?>
+          <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+            <div class="course-item">
+              <img src="<?= base_url('./upload/cover/' . $trans->cover) ?>" class="img-fluid" alt="...">
+              <div class="course-content">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4><?= $trans->id_matkul ?></h4>
+                </div>
+
+                <h3><a href="<?= base_url('detail_materi/index/' . $trans->id_materi) ?>"><?= $trans->kategori ?> - ><?php echo $trans->judul ?></a></h3>
+                <p><?= $trans->desk_materi ?></p>
+                <div class="trainer d-flex justify-content-between align-items-center">
+                  <div class="trainer-profile d-flex align-items-center">
+                    <img src="<?= base_url('asset/user-template') ?>/assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+                    <span><?= $session_user->nama ?></span>
+                  </div>
+                  <div class="trainer-rank d-flex align-items-center">
+                    <i class="bi bi-calendar-check"></i>&nbsp;<small><?= $trans->CREATED_MTR ?></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Course Item-->
+          <?php endforeach?>
+
+      </div>
 
         <!-- Modal -->
         <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
