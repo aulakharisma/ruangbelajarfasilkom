@@ -18,4 +18,15 @@ public function getmateri($id){
     return $data->result();
 }
 
+public function getmateri1(){
+    $sql = "SELECT * FROM materi";
+    $data = $this->db->query($sql);
+    return $data->result();
+}
+
+public function getmatkul(){
+    $sql = "SELECT * FROM matkul";
+    $data = $this->db->query($sql);
+    return $data->result();
+}
 }?>

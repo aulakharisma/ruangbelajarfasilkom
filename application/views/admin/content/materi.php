@@ -14,70 +14,37 @@
                 <table id="example1" class="responsive-table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Nama User</th>
-                    <th>Judul</th>
-                    <th>Mata Kuliah</th>
-                    <th>Program Studi</th>
-                    <th>Kategori</th>
-                    <th>Deskripsi</th>
-                    <th>Cover</th>
+                    <th>id materi</th>
+                    <th>id admin</th>
+                    <th>id user</th>
+                    <th>judul</th>
+                    <th>id matkul</th>
                     <th>Dokumen</th>
-                    <th>Created</th>
-                    <th>Updated</th>
+                    <th>kategori</th>
+                    <th>deskripsi</th>
+                    <th>cover</th>
+                    <th>created</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Aula Kharismah</td>
-                    <td>Prototyping Website menggunakan figma</td>
-                    <td>UI UX</td>
-                    <td>Umum</td>
-                    <td>Tugas</td>
-                    <td>ini adalah tugas dari dosen x untuk mk uiux</td>
-                    <td>covermateri1.png</td>
-                    <td>dokmateri1.pdf</td>
-                    <td>28/9/2023</td>
-                    <td>28/9/2023</td>
-                    <td>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="fa-solid fa-trash"></i></button>
-                        <a href="<?=base_url()?>dashboard_admin/editmateri" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>Farhan</td>
-                    <td>Prototyping Website menggunakan figma</td>
-                    <td>UI UX</td>
-                    <td>Umum</td>
-                    <td>Tugas</td>
-                    <td>ini adalah tugas dari dosen x untuk mk uiux</td>
-                    <td>covermateri1.png</td>
-                    <td>dokmateri1.pdf</td>
-                    <td>28/9/2023</td>
-                    <td>28/9/2023</td>
-                    <td>
-                        <a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
-                        <a href="<?=base_url()?>dashboard_admin/editmateri" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>Adam</td>
-                    <td>Prototyping Website menggunakan figma</td>
-                    <td>UI UX</td>
-                    <td>Umum</td>
-                    <td>Tugas</td>
-                    <td>ini adalah tugas dari dosen x untuk mk uiux</td>
-                    <td>covermateri1.png</td>
-                    <td>dokmateri1.pdf</td>
-                    <td>28/9/2023</td>
-                    <td>28/9/2023</td>
-                    <td>
-                        <a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
-                        <a href="<?=base_url()?>dashboard_admin/editmateri" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
-                    </td>
-                  </tr>
+                  <?php foreach ($alpha as $trans): ?>
+                        <tr>
+                            <td><?php echo $trans->id_materi ?></td>
+                            <td><?php echo $trans->id_admin ?></td>
+                            <td><?php echo $trans->id_user ?></td>
+                            <td><?php echo $trans->judul ?></td>
+                            <td><?php echo $trans->id_matkul ?></td>
+                            <td><?php echo $trans->dok_materi ?></td>
+                            <td><?php echo $trans->kategori ?></td>
+                            <td><?php echo $trans->desk_materi ?></td>
+                            <td><?php echo $trans->cover ?></td>
+                            <td><?php echo $trans->CREATED_MTR ?></td>
+                            <td><a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                            <a href="<?=base_url()?>dashboard_admin/editmateri" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a></td>
+                        </tr>
+                    <?php endforeach?>
+                </tbody>
                   </tbody>
                 </table>
               </div>

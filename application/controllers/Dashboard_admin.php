@@ -28,11 +28,13 @@ class Dashboard_admin extends CI_Controller {
 	}
 	public function matkul()
 	{
-		$this->temp->show('admin/content/matkul');
+		$data["alpha"] = $this->Db->getmatkul();
+		$this->temp->show('admin/content/matkul',$data);
 	}
 	public function materi()
 	{
-		$this->temp->show('admin/content/materi');
+		$data["alpha"] = $this->Db->getmateri1();
+		$this->temp->show('admin/content/materi',$data);
 	}
 	public function registrasi()
 	{
