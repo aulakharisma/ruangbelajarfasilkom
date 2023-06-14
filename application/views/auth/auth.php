@@ -62,7 +62,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <img src="asset/img/logo-horizontal-b-g-k.png" alt="Logo" class="text-center">
+        <img src="<?=base_url("asset/img/logo.png")?>" alt="Logo" class="text-center">
         <div class="login-container">
           <h2>Login</h2>
           <form class="login-form" method="post" action="http://localhost/ruangbelajarfasilkom/login/logins">
