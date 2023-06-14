@@ -10,13 +10,17 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="active" href="<?= base_url() ?>home">Beranda</a></li>
+          <li><a href="<?= base_url() ?>home">Beranda</a></li>
           <li><a href="<?= base_url() ?>materi">Materi</a></li>
           <li><a href="<?= base_url() ?>kategori">Kategori</a></li>
           <li class="dropdown"><a href="#"><span><i class="bi bi-person-circle ps-5" style="font-size : 2rem"></i></span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li class="px-3 my-0 py-0"><p><b><?= $session_user->nama ?></b></p></li>
-              <li class="px-3 my-0 py-0"><p><?= $session_user->username ?></p></li>
+              <li class="px-3 my-0 py-0">
+                <p><b><?= $session_user->nama ?></b></p>
+              </li>
+              <li class="px-3 my-0 py-0">
+                <p><?= $session_user->username ?></p>
+              </li>
               <li class="px-3 my-0 py-0"><?= $session_user->prodi ?></li>
               <hr>
 
