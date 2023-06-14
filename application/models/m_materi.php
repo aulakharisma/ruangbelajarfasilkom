@@ -52,9 +52,22 @@ class m_materi extends CI_Model
         return $this->db->get()->row();
     }
 
+    public function get_ID2($id)
+    {
+        $data = $this->db->query("SELECT * FROM materi WHERE id_materi='$id'");
+        return $data->result();
+    }
+
     public function insert($data)
     {
         $sql = "INSERT INTO materi (judul, id_matkul, kategori, desk_materi, cover, dok_materi) VALUES (?,?,?,?,?,?)";
         $this->db->query($sql, array($data['judul'], $data['id_matkul'], $data['kategori'], $data['desk_materi'], $data['cover'], $data['dok_materi']));
+    }
+
+    public function edit($data)
+    {
+        $sql = "UPDATE materi SET judul = ?, id_matkul  = ?, kategori = ?, desk_materi = ? WHERE id_materi = ? ";
+
+        $this->db->query($sql, array($data['judul'], $data['id_matkul'], $data['kategori'], $data['desk_materi'], $data['primary']));
     }
 }

@@ -69,4 +69,18 @@ class Materi extends CI_Controller
             // File tidak ditemukan, tampilkan pesan error atau redirect ke halaman tertentu
         }
     }
+
+    public function update($id = NULL)
+    {
+        if ($this->input->post()) {
+            $data = $this->input->post();
+            $return = $this->m_materi->edit($data);
+            redirect('Materi/index');
+        } else {
+            $data['materi'] = $this->m_materi->get_ID2($id);
+            $data['matkul'] = $this->m_matkul->get_rawSQL();
+            $data['enum_values'] = $this->m_materi->get_enum('materi', 'kategori');
+            $this->template->render('user/content/edit-materi', $data);
+        }
+    }
 }

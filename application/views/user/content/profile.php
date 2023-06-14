@@ -31,7 +31,7 @@
                   <h4><?= $mtr->nama_matkul ?></h4>
                   <div>
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal"><i class="bi bi-trash"></i></button>
-                    <a href="<?= base_url() ?>home/edit" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
+                    <a href="<?= base_url('Materi/update/' . $mtr->id_materi) ?>" class="btn btn-warning"><i class="bi bi-pencil"></i></a>
                   </div>
                 </div>
 
