@@ -20,8 +20,9 @@
                   </tr>
                   </thead>
                   <tbody>
+                    <?php foreach ($matkul as $key => $mk) {?>
                   <tr>
-                    <td>Metode Numerik</td>
+                    <td><?= $mk->nama_matkul ?></td>
                     <td>mata kuliah ini dimaksudkan untuk memberi kemampuan pada mahasiswa tentang topik-topik dasar dari metode numerik yaitu galat, interpolasi, penghampiran fungsi, sistem persamaan linier, integrasi numerik, dan persamaan diferensial biasa sehingga diharapkan mahasiswa memperoleh pemahaman intuitif tentang beberpa ametode numerik yang digunakan untuk menyelesaikan masalah-masalah dasar dalam metode numerik, juga mendapatkan apresiasi mengenai konsep galat dan kebutuhan untuk menganalisis dan mekanismenya, serta dapat mengembangkan pengalaman dalam menerapkan metode numerik dengan menggunakan komputer.</td>
                     <td>Informatika</td>
                     <td>
@@ -29,6 +30,7 @@
                         <a href="" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
                     </td>
                   </tr>
+                  <?Php } ?>
 
                   <tr>
                     <td>Struktur Data</td>

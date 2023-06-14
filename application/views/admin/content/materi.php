@@ -27,9 +27,11 @@
                   </tr>
                   </thead>
                   <tbody>
+
+                  <?php foreach ($materi as $key => $mtr) {?>
                   <tr>
                     <td>Aula Kharismah</td>
-                    <td>Prototyping Website menggunakan figma</td>
+                    <td><?= $mtr->nama_matkul ?></td>
                     <td>UI UX</td>
                     <td>Umum</td>
                     <td>Tugas</td>
@@ -43,6 +45,7 @@
                         <a href="" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
                     </td>
                   </tr>
+                  <?Php } ?>
 
                   <tr>
                     <td>Farhan</td>

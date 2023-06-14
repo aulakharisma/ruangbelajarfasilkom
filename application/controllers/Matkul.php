@@ -17,10 +17,9 @@ class Matkul extends CI_Controller
             'title' => 'Matkul',
             'matkul' => $this->M_Matkul->getAllData()
         );
-        $this->load->view('user/template/header', $data);
-		$this->load->view('user/template/navbar', $data);
-		$this->load->view('user/content/kategori', $data);
-		$this->load->view('user/template/footer');
+        $this->template->render('user/content/matkul', $data);
+        $this->template->render('admin/content/matkul', $data);
+
     }
 
     public function addDataMatkul()

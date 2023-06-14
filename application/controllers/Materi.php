@@ -13,6 +13,7 @@ class Materi extends CI_Controller
     {
         $result['materi'] = $this->m_materi->get_rawSQL2();
         $this->template->render('user/content/materi', $result);
+
     }
 
     public function add()
