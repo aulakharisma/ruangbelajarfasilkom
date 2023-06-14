@@ -8,22 +8,23 @@ class Dashboard_admin extends CI_Controller {
 		$this->load->model('Db');
 		$this->load->library('temp');
         if(!$this->session->has_userdata('id')){
-            redirect('login');
+            redirect('Login');
         }
 		if($this->session->userdata('tipe') != '1'){
-			redirect('login');
+			redirect('Login');
 		}
     }
 
 	public function index()
 	{
-		$data['user'] = $this->db->get_where('users', ['id' => $this->session->userdata('id')])->row_array();
+		$data['user'] = $this->db->get_where('users', ['id_user' => $this->session->userdata('id')])->row_array();
 		
 		$this->temp->show("admin/content/dashboard");
 	}
 	public function users()
 	{
-		$this->temp->show('admin/content/users');
+		$data["alpha"] = $this->Db->getuser();
+		$this->temp->show('admin/content/users',$data);
 	}
 	public function matkul()
 	{

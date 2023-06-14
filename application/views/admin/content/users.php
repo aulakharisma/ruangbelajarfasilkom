@@ -20,37 +20,15 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Aula Kharismah</td>
-                    <td>20081010192</td>
-                    <td>Informatika</td>
-                    <td>
-                        <a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
-                        <a href="" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>Adam</td>
-                    <td>20081010190</td>
-                    <td>Informatika</td>
-                    <td>
-                        <a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
-                        <a href="" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>Farhan</td>
-                    <td>20081010197</td>
-                    <td>Informatika</td>
-                    <td>
-                        <a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
-                        <a href="" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a>
-                    </td>
-                  </tr>
-
-                  </tbody>
+                    <?php foreach ($alpha as $trans): ?>
+                        <tr>
+                            <td><?php echo $trans->nama ?></td>
+                            <td><?php echo $trans->username ?></td>
+                            <td><?php echo $trans->prodi ?></td>
+                            <td><a href="" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                            <a href="<?=base_url()?>dashboard_admin/editmateri" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></i></a></td>
+                    <?php endforeach?>
+                </tbody>
                 </table>
               </div>
               <!-- /.card-body -->

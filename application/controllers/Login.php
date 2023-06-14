@@ -35,16 +35,16 @@ class login extends CI_Controller {
 				if(password_verify($password, $user['password'])){
 					$data = [
 						'username' => $user['username'],
-						'id' => $user['id'],
-						'tipe' => $user['tipe']
+						'id' => $user['id_user'],
+						'tipe' => $user['tipe'],
+						'nama' => $user['nama']
 					];
-					$this->session->sess_expiration = '5';
 					$this->session->set_userdata($data);
 					if ($user['tipe'] == 1){
-						redirect('Dashboard_admin', 'refresh');
+						redirect('Dashboard_admin');
 					}
 					else {
-						redirect('Home', 'refresh');
+						redirect('Home');
 					}
 					
 				}

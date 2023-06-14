@@ -14,7 +14,7 @@ class Profile extends CI_Controller
         $data = array(
             'title' => 'Profile',
             'users' => $this->M_Profile->getAllData(),
-            'session_user' => $this->db->get_where('users', ['id' => $this->session->userdata('id')])->row(),
+            'session_user' => $this->db->get_where('users', ['id_user' => $this->session->userdata('id')])->row(),
             // 'materi_user' => $this->db->get_where('materi', ['id' => $this->session->userdata('id')])->row()
         );
         $this->template->render('user/content/profile', $data);
